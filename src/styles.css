@@ -1,0 +1,94 @@
+:root{
+    --brand:#0b0c3f; /* deep navy for headings */
+    --text:#1f1f1f; /* body text */
+    --muted:#6b6b6b; /* secondary text */
+    --card:#d7d3f1; /* soft lavender card */
+    --bg:#ffffff; /* page background */
+    --stroke:#e5e5ef; /* subtle borders */
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+    margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    color:var(--text); background:var(--bg);
+}
+
+
+/* Container */
+.wrapper{max-width:1100px; margin:0 auto; padding:24px 20px}
+
+
+/* NAVBAR */
+.nav{
+    display:flex; align-items:center; justify-content:space-between; gap:24px; padding:8px 0;
+}
+.brand{
+    font-weight:700; letter-spacing:.2px; color:var(--text);
+}
+.brand a{color:var(--brand); text-decoration:underline; text-underline-offset:3px}
+.nav ul{list-style:none; display:flex; gap:28px; margin:0; padding:0}
+.nav a{color:var(--text); text-decoration:none; font-weight:600}
+.nav a.active{color:var(--brand)}
+
+
+/* HERO GRID */
+.hero{display:grid; grid-template-columns: 380px 1fr; gap:48px; align-items:start; padding:32px 0}
+@media (max-width: 900px){ .hero{grid-template-columns:1fr; gap:28px} }
+
+
+.card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* card lifts */
+    box-shadow: 0 14px 28px rgba(0,0,0,.25);
+}
+
+/* Avatar image animation */
+.avatarWrap img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .avatarWrap img {
+    transform: scale(1.05) translateY(-6px); /* pop + float */
+}
+
+
+/* PROFILE CARD */
+.card{
+    background:var(--card); border-radius:20px; padding:28px; box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+.card img{width:100%; height:auto; display:block; border-radius:12px}
+.card h3{margin:18px 0 6px; text-align:center; color:var(--brand)}
+.card .divider{height:2px; width:60%; background:var(--brand); opacity:.5; margin:10px auto 14px; border-radius:999px}
+.card h4{margin:0; text-align:center; color:var(--brand)}
+.card .follow{
+    display:flex; align-items:center; justify-content:space-between; padding-top:18px; margin-top:18px; border-top:1px solid rgba(0,0,0,.1);
+}
+.card .socials{display:flex; gap:12px}
+.iconBtn{width:34px; height:34px; border:1px solid rgba(0,0,0,.2); border-radius:999px; display:grid; place-items:center; background:#fff}
+
+
+/* RIGHT COLUMN */
+.right h1{font-size:64px; line-height:1; margin:0 0 12px; color:var(--brand)}
+.right h1 .light{font-weight:300}
+.right p.lead{margin:0 0 22px; color:#2a2a2a}
+.btnRow{display:flex; gap:14px; margin:14px 0 22px}
+.btn{
+    appearance:none; border:none; border-radius:999px; padding:10px 18px; font-weight:800; letter-spacing:.3px; cursor:pointer; box-shadow:0 6px 10px rgba(0,0,0,.12);
+}
+.btn.primary{background:var(--brand); color:white}
+.btn.ghost{background:white; border:1px solid #cfcfe8}
+.btn:active{transform:translateY(1px)}
+
+
+/* FOOTER BAR */
+@media (max-width: 800px){ .footer .bar{grid-template-columns:1fr; gap:8px} }
