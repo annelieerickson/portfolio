@@ -1,4 +1,5 @@
 import ProfileCard from './ProfileCard'
+import { Link } from 'react-router-dom';
 
 
 export default function Hero(){
@@ -9,15 +10,15 @@ export default function Hero(){
 
             <div className="right">
                 <h1>
-                    HELLO <span className="light">EVERYONE</span>
+                    HELLO <span className="light">WORLD!</span>
                 </h1>
-                <p className="lead">Here’s Who I am &amp; What I do.</p>
+                <p className="lead">About Me</p>
 
 
                 <div className="btnRow">
-                    <a className="btn primary" href="#resume">RESUME</a>
-                    <a className="btn ghost" href="#codingprojects">CODING PROJECTS</a>
-                    <a className="btn ghost" href="#artprojects">ART PROJECTS</a>
+                    <Link className="btn primary" to="/resume">RESUME</Link>
+                    <Link className="btn primary" to="/projects"> CODING PROJECTS</Link>
+                    <Link className="btn primary" to="/art"> ART PROJECTS</Link>
                 </div>
 
 

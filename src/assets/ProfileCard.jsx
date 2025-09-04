@@ -1,4 +1,6 @@
 import anniepfp from '../assets/anniepfp.jpg';
+import githubLogo from '../assets/github.png';
+import linkedinLogo from '../assets/linkedin.png';
 
 export default function ProfileCard(){
     return (
@@ -13,10 +15,14 @@ export default function ProfileCard(){
 
 
             <div className="follow">
-                <strong>Follow On</strong>
+                <strong>Connect With Me On ...</strong>
                 <div className="socials">
-                    <a className="iconBtn" aria-label="Instagram" href="#">⌾</a>
-                    <a className="iconBtn" aria-label="Facebook" href="#">f</a>
+                    <a className="iconBtn" aria-label="GitHub" href="#">
+                        <img src={githubLogo} alt="Github Logo" />
+                    </a>
+                    <a className="iconBtn" aria-label="LinkedIn" href="#">
+                        <img src={linkedinLogo} alt="LinkedIn Logo" />
+                    </a>
                 </div>
             </div>
         </aside>

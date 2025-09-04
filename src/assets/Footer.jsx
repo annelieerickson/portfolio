@@ -3,9 +3,8 @@ export default function Footer(){
     return (
         <footer className="footer" id="contact">
             <div className="bar wrapper">
-                <small>© {year} Your Name. Created with React.</small>
-                <div><strong>CALL</strong><br/>📞 <a href="tel:+19100000000">+(91)0000000</a></div>
-                <div><strong>E-MAIL</strong><br/>✉️ <a href="mailto:thismail@gmail.com">thismail@gmail.com</a></div>
+                <small>© {year} Annelie Erickson. Created with React. Icons from flaticon.com</small>
+                <div><strong>E-MAIL</strong><br/> <a href="mailto:annelieerickson@gmail.com">annelieerickson@gmail.com</a></div>
             </div>
         </footer>
     );
