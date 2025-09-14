@@ -1,9 +1,9 @@
 :root {
-    --brand: #0b0c3f; /* deep navy for headings */
+    --brand: #A5B68D; /* deep navy for headings */
     --text: #1f1f1f; /* body text */
     --muted: #6b6b6b; /* secondary text */
-    --card: #d7d3f1; /* soft lavender card */
-    --bg: #ffffff; /* page background */
+    --card: #E7CCCC; /* soft lavender card */
+    --bg: #EDE8DC; /* page background */
     --stroke: #e5e5ef; /* subtle borders */
 }
 
@@ -34,7 +34,7 @@ body {
 /* NAVBAR */
 .nav {
     background: var(--brand);
-    color: #fff;
+    color: #EDE8DC;
     width: 100%;
 }
 
@@ -49,21 +49,21 @@ body {
 }
 
 .nav a {
-    color: #fff;
+    color: #EDE8DC;
     text-decoration: none;
     font-weight: 600;
 }
 
 .nav a.active {
-    color: #ffd966;
+    color: #4c702a;
 }
 
 .nav .brand {
-    color: #fff;
+    color: #EDE8DC;
 }
 
 .nav .brand a {
-    color: #ffd966;
+    color: #4c702a;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -151,13 +151,13 @@ body {
 .card h3 {
     margin: 18px 0 6px;
     text-align: center;
-    color: var(--brand)
+    color: #4c702a
 }
 
 .card .divider {
     height: 2px;
     width: 60%;
-    background: var(--brand);
+    background: #4c702a;
     opacity: .5;
     margin: 10px auto 14px;
     border-radius: 999px
@@ -166,7 +166,7 @@ body {
 .card h4 {
     margin: 0;
     text-align: center;
-    color: var(--brand)
+    color: #4c702a
 }
 
 .card .follow {
@@ -199,7 +199,7 @@ body {
     font-size: 64px;
     line-height: 1;
     margin: 0 0 12px;
-    color: var(--brand)
+    color: #4c702a
 }
 
 .right h1 .light {
@@ -323,5 +323,127 @@ body {
 .links {
     display: flex;
     gap: 12px;
+}
+
+.link {
+    color: white;
+}
+
+.collaboratorTag {
+    color: #4c702a;
+}
+
+/* ===== Modal ===== */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 1000;
+}
+
+.modalPanel {
+    background: #fff;
+    width: min(900px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+    position: relative;
+}
+
+.modalClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    line-height: 1;
+    background: #fff;
+    border: 1px solid var(--stroke);
+    border-radius: 999px;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.projectModalContent h2 {
+    margin: 0 0 8px;
+    color: var(--brand);
+}
+
+.projectModalContent .projectDetails {
+    margin: 8px 0 12px;
+    color: #333;
+}
+
+
+/* ===== Carousel ===== */
+.carousel {
+    position: relative;
+    margin: 12px 0 16px;
+}
+
+.carouselViewport {
+    width: 100%;
+    height: clamp(280px, 60vh, 520px);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #f4f4fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselViewport img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.carouselBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, .95);
+    border: 1px solid var(--stroke);
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .15);
+}
+
+.carouselBtn.prev {
+    left: 12px;
+}
+
+.carouselBtn.next {
+    right: 12px;
+}
+
+.carouselDots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: 1px solid var(--brand);
+    background: transparent;
+}
+
+.dot.active {
+    background: var(--brand);
 }
 

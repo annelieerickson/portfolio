@@ -10,9 +10,9 @@ export default function Hero(){
 
             <div className="right">
                 <h1>
-                    HELLO <span className="light">WORLD!</span>
+                    "HELLO, <span className="light"><em>WORLD!"</em></span>
                 </h1>
-                <p className="lead">About Me</p>
+                <p className="lead"><em>More About Me ... </em></p>
 
 
                 <div className="btnRow">

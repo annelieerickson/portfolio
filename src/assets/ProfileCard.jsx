@@ -11,7 +11,7 @@ export default function ProfileCard(){
 
             <h3>Annie Erickson</h3>
             <div className="divider" />
-            <h4>Aspiring Computer Scientist & Illustrator</h4>
+            <h4>Aspiring Web Developer & Illustrator</h4>
 
 
             <div className="follow">
